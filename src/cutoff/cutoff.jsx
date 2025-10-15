@@ -80,12 +80,22 @@ export function Cutoff() {
 
         <div className="info">
           {geoAllowed === true && (
-            <p>Your Local Time: <strong>{localTime.toLocaleTimeString([], { hour12: true, hour: "2-digit", minute: "2-digit" })}</strong></p>
+            <p>
+              Your Local Time:{" "}
+              <strong>
+                {localTime.toLocaleTimeString([], {
+                  hour12: true,
+                  hour: "2-digit",
+                  minute: "2-digit"
+                })}
+              </strong>
+            </p>
           )}
 
           {geoAllowed === true && closestInfo && (
             <p>
-              Closest warehouse detected: <strong>{warehouseLocations[closestInfo.code].name}</strong>
+              Closest warehouse detected:{" "}
+              <strong>{warehouseLocations[closestInfo.code].name}</strong>
               {closestInfo.distance !== null && ` (${closestInfo.distance} miles away)`}
             </p>
           )}
@@ -106,8 +116,16 @@ export function Cutoff() {
                 {loc.name}
               </label>
             ))}
+
+            {/* Gentle hint about allowing location */}
+            {geoAllowed === false && (
+              <p style={{ fontSize: "0.9rem", color: "#888", marginTop: "0.5rem" }}>
+                For the best experience, allow your browser to detect your location.
+              </p>
+            )}
           </div>
         </div>
+
       </header>
 
       {/* REST OF YOUR UI UNTOUCHED */}
