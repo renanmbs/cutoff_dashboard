@@ -119,7 +119,7 @@ export function Cutoff() {
 
             {/* Gentle hint about allowing location */}
             {geoAllowed === false && (
-              <p style={{ fontSize: "0.9rem", color: "#888", marginTop: "0.5rem" }}>
+              <p style={{ fontSize: "1.1rem", color: "#919191ff", marginTop: "0.5rem", fontStyle: "italic", fontWeight: "600" }}>
                 For the best experience, allow your browser to detect your location.
               </p>
             )}
