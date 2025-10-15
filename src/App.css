@@ -1,38 +1,149 @@
-.App {
+.cutoff-page {
+    font-family: "Inter", sans-serif;
+    min-height: 100vh;
+    padding: 2rem;
+    position: relative;
+}
+
+.cutoff-page::before {
+    content: "";
+    position: fixed; /* stays put while scrolling */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.657);
+    z-index: 0;
+}
+
+.banner,
+.cutoff-container,
+.card {
+    position: relative;
+    z-index: 1;
+}
+
+.cutoff-page > * {
+    position: relative;
+    z-index: 1;
+}
+
+.banner {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.banner h1,
+.banner h4 {
+  margin: 0;
+}
+
+.banner h4 {
+  margin-top: 0.5rem;
+}
+
+.banner h1 {
+    font-size: 6rem;
+    font-weight: 700;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.cutoff-page h4 {
+    font-size: 1.5rem;
+    color: #e46e5a;
+    font-weight: 600;
+    margin-top: 0.5rem;
+    font-style: italic;
+    text-align: center;
+}
+
+.cutoff-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.card {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 1.5rem;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+.card h2 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #334e68;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.time {
+    padding: 2rem 0;
+    border-radius: 12px;
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    color: #486581;
+}
+
+header .info{
+    color: white;
+    font-size: 1.5rem;
+}
+
+.warehouse-selector input[type="radio"] {
+  margin-right: 0.5rem; /* space between radio button and text */
+}
+
+.warehouse-selector{
+    accent-color: rgb(179, 0, 0);
+}
+
+.warehouse-selector label.selected {
+  color: rgb(255, 0, 0);
+}
+
+ul li {
+    margin-bottom: 0.5rem;
+    line-height: 1.5;
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+.tooltip-label strong {
+    color: #102a43;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-image: url("./image/ship4.webp");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.time-label {
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
