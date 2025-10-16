@@ -210,6 +210,12 @@ const cards = {
       notes: ["Pending paperwork to Shipping Department by 12:00 PM (EST)"]
     },
     {
+      id: "usps",
+      title: "USPS Cutoff Time",
+      cutoffs: ["10:00"],
+      notes: ["Pending paperwork to Shipping Department by 10:00 AM (EST)"]
+    },
+    {
       id: "cust_exp",
       title: "Customer Pickups Cutoff Time",
       cutoff: "16:30",
