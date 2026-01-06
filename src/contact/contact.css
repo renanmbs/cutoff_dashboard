@@ -58,13 +58,13 @@
 }
 
 .contact-location a {
-  color: rgb(179,0,0);
+  color: #C31F27;
   text-decoration: none;
   transition: color 0.2s ease;
 }
 
 .contact-location a:hover {
-  color: rgb(120,0,0);
+  color: #C31F27;
   text-decoration: underline;
 }
 
@@ -78,7 +78,7 @@
 }
 
 .red {
-  color: #ff4d4f !important;
+  color: #C31F27 !important;
 }
 
 .gr {

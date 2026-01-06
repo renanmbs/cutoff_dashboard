@@ -1,7 +1,6 @@
 .cutoff-page {
     font-family: "Montserrat", sans-serif;
     min-height: 100vh;
-    padding: 2rem;
     position: relative;
 }
 
@@ -12,7 +11,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.657);
+    background: #333B41;
     z-index: 0;
 }
 
@@ -43,7 +42,7 @@
 }
 
 .banner h1 {
-    font-size: 6rem;
+    font-size: 3rem;
     font-weight: 700;
     color: white;
     text-transform: uppercase;
@@ -52,7 +51,7 @@
 
 .cutoff-page h4 {
     font-size: 1.5rem;
-    color: #e46e5a;
+    color: white;
     font-weight: 600;
     margin-top: 0.5rem;
     font-style: italic;
@@ -62,7 +61,7 @@
 .cutoff-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
+    gap: 1.3rem;
 }
 
 .card {
@@ -112,11 +111,11 @@ header .info{
 }
 
 .warehouse-selector{
-    accent-color: rgb(179, 0, 0);
+    accent-color: #C31F27;
 }
 
 .warehouse-selector label.selected {
-  color: rgb(255, 0, 0);
+  color: #C31F27;
 }
 
 ul li {
@@ -134,11 +133,6 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-image: url("./image/ship4.webp");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
 }
 
 .time-label {
@@ -146,4 +140,33 @@ body {
   font-weight: bold;
   text-transform: uppercase;
   text-align: center;
+}
+
+.app-header {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* keeps title centered */
+  position: relative;
+  padding: 1rem 2rem 1rem;
+}
+
+/* Logo pinned to far left */
+.app-logo {
+  position: absolute;
+  left: 1rem;
+  height: 6rem;
+  width: auto;
+}
+
+/* Title stays centered */
+.app-title {
+  margin: 0;
+}
+
+.app-header a {
+  position: absolute;
+  left: 1rem;
+  height: 6rem;
+  display: flex;
+  align-items: center;
 }

@@ -2,6 +2,7 @@ import "./cutoff.css";
 import { useState, useEffect } from "react";
 import { Tooltip } from "../tooltip/tooltip";
 import { Contact } from "../contact/contact";
+import logo from "../image/Monarch Metal White Transparent.png";
 
 const warehouseLocations = {
   TX: { name: "Dallas - TX", tz: "America/Chicago", lat: 32.7976639402147, lon: -97.03247275120683 },
@@ -58,7 +59,7 @@ export function Cutoff() {
     const cutoff = new Date(now);
     cutoff.setHours(hours, minutes, 0, 0);
     const diffMinutes = (cutoff - now) / 60000;
-    if (diffMinutes <= 0) return "#ff4d4f";
+    if (diffMinutes <= 0) return "#C31F27";
     if (diffMinutes <= 60) return "#faad14";
     return "#52c41a";
   }
@@ -76,7 +77,18 @@ export function Cutoff() {
   return (
     <div className="cutoff-page">
       <header className="banner">
-        <h1>Cutoff Times Dashboard</h1>
+        <header className="app-header">
+          {logo && (
+            <a href="https://monarchintranet.netlify.app/">
+              <img
+                src={logo}
+                alt="Company Logo"
+                className="app-logo"
+              />
+            </a>
+          )}
+          <h1 className="app-title">Cutoff Times Dashboards</h1>
+        </header>
 
         <div className="info">
           {geoAllowed === true && (
