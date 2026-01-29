@@ -11,7 +11,7 @@ root.render(
     clientId="8ef309ff506b4999b2356de7a95f97f8"
     domain="https://monarchmetal.kinde.com"
     redirectUri="https://monarchcutoffdashboard.netlify.app/"
-    logoutUri="https://monarchcutoffdashboard.netlify.app/"
+    logoutUri="https://monarchintranet.netlify.app"
   >
     <React.StrictMode>
       <App />
