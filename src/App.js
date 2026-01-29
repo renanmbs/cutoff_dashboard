@@ -18,7 +18,7 @@ function App() {
           <div className="auth-hero">
             <h1 className="auth-title">Access Restricted</h1>
             <p className="auth-subtitle">
-              Please sign in to access this Monarch Metal tool.
+              Please sign in to access this Monarch Metal tool
             </p>
           </div>
 
