@@ -10,7 +10,7 @@ export function Contact() {
     },
     {
       location: "Texas",
-      email: "tshaw@monarchmetal.com",
+      email: "txshipping@monarchmetal.com",
       phone: "+1 (631)-750-3000 Ext. 148"
     },
     {
